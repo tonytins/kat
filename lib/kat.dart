@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
+/// A simple helper class to read and write files.
 Future<void> cat(List<String> paths, {bool showLineNumbers = false}) async {
   if (paths.isEmpty) {
     // No files provided as arguments, read from stdin and print to stdout.
@@ -15,7 +16,7 @@ Future<void> cat(List<String> paths, {bool showLineNumbers = false}) async {
       try {
         await for (final line in lines) {
           if (showLineNumbers) {
-            // Write the line number before the output.
+            // Write the line number into the output.
             stdout.write('${lineNumber++} ');
           }
           stdout.writeln(line);
@@ -27,11 +28,12 @@ Future<void> cat(List<String> paths, {bool showLineNumbers = false}) async {
   }
 }
 
+/// Handles an error that occurred while reading a file.
 Future<void> _handleError(String path) async {
   // If the file does not exist, print an error message.
   if (await FileSystemEntity.isDirectory(path)) {
     stderr.writeln('$path: error: failed to read file');
   } else {
-    exitCode = 2;
+    exitCode = 2; // presume failure
   }
 }

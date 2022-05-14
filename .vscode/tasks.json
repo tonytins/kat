@@ -27,6 +27,23 @@
       "problemMatcher": [],
       "label": "dart: dart pub upgrade",
       "detail": ""
+    },
+    {
+      "type": "dart",
+      "command": "dart",
+      "cwd": "",
+      "args": ["doc", "."],
+      "problemMatcher": [],
+      "label": "dart: dart doc .",
+      "detail": ""
+    },
+    {
+      "type": "dart",
+      "command": "dart",
+      "cwd": "",
+      "args": ["compile", "exe", "bin/kat.dart", "-o", "out/kat"],
+      "problemMatcher": [],
+      "label": "dart: dart compile exe bin/kat.dart -o out/kat"
     }
   ]
 }
