@@ -41,6 +41,15 @@
       "type": "dart",
       "command": "dart",
       "cwd": "",
+      "args": ["test"],
+      "problemMatcher": [],
+      "label": "dart: dart test",
+      "detail": ""
+    },
+    {
+      "type": "dart",
+      "command": "dart",
+      "cwd": "",
       "args": ["compile", "exe", "bin/kat.dart", "-o", "out/kat"],
       "problemMatcher": [],
       "label": "dart: dart compile exe bin/kat.dart -o out/kat"
